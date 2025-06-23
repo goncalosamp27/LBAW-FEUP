@@ -1,0 +1,152 @@
+@import url('variables.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('home.css');
+@import url('artist.css');
+@import url('event-card.css');
+@import url('event.css');
+@import url('events.css');
+@import url('artist-card.css');
+@import url('create.css');
+@import url('comment.css');
+@import url('show-more.css');
+@import url('login.css');
+@import url('register.css');
+@import url('admin.css');
+@import url('tickets.css');
+@import url('edit-page.css');
+@import url('notifications.css');
+@import url('info-page.css');
+@import url('forgot-password.css');
+@import url('404.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('reset-password.css');
+@import url('create-poll.css');
+@import url('poll.css');
+@import url('poll-data.css');
+
+* {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto; /* Center the body */
+}
+
+.content {
+  width: 80%; 
+  max-width: 1200px; /* Prevents the body from getting too wide */
+  min-width: 320px; /* Prevents the body from getting too narrow */
+  margin: auto;
+  margin-top: 7.5rem;
+  flex: 1;
+  display: 1;
+  flex-direction: column;
+}
+
+.go-back-btn {
+  display: flex; /* To center content using flexbox */
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  padding: 0.8rem 1.5rem; /* Adjust padding for a larger clickable area */
+  background-color: var(--primary-color); /* Keep your primary color */
+  color: #fff; /* White text for contrast */
+  font-size: 1.5rem; /* Adjust font size as needed */
+  border-radius: 3em; /* Rounded shape */
+  text-decoration: none; /* Remove underline for anchor tags */
+  cursor: pointer; /* Pointer cursor for better UX */
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.go-back-btn:hover{
+  background-color: var(--hover-color);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+.success,
+.error{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.success{
+  color: green;
+}
+.error{
+  color: red;
+}
+
+html, body {
+	background-color: var(--background-color);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.faq-item h3{
+  color: var(--hover-color);
+  font-size: 1.2rem;
+}
+
+.nothing-to-see {
+  text-align: center;
+  border-radius: 12px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  color: #ffffff;
+}
+
+.nothing-to-see-image {
+  max-width: 150px;
+  margin-right: 20px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+.nothing-to-see h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.nothing-to-see p {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.tickets-list .refresh-button {
+  margin: auto;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tickets-list .refresh-button:hover {
+  background-color: var(--hover-color);
+}

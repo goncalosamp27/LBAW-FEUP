@@ -1,0 +1,730 @@
+@import url('variables.css');
+
+.event-page-content{
+	margin: 3.5rem auto;
+}
+
+.event-page-info{
+	padding: 1rem;
+	word-wrap: break-word;
+	overflow-wrap: break-word; 
+	text-overflow: ellipsis; 
+	white-space: normal; 
+	justify-content: space-between;
+}
+
+.event-page-details *{
+    margin-top: 20px;
+}
+.event-page-img {
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .event-page-img img {
+	border-radius: 1rem;
+	width: 90%; /* Relative to the container's width */
+	max-width: 46rem;
+    height: auto;
+	object-fit: cover;
+	box-shadow: 0em 0em 2em rgba(0, 0, 0, 0.8);
+  }
+
+  .event-page-info h1 {
+    /*-webkit-line-clamp: 2;*/ /* Show only 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.event-page-info h2{
+	font-size: 2rem;
+	color: #FFF;
+}
+
+.user-event-owner {
+    font-size: 2rem;
+	text-decoration: none;
+    width: 100%;
+}
+
+.user-event-owner:hover{
+	cursor: pointer;
+	color: var(--hover-color);
+}
+
+.user-event-owner h2:hover{
+	color: var(--hover-color);
+}
+
+
+.event-page-info h3{
+	font-size: 1.2rem;
+	color: #FFF;
+}
+
+.event-page-info h4{
+	font-size: 1.2rem;
+	color: #FFF;
+}
+
+.event-page-info h5{
+    margin-top:0;
+	font-size: 1.2rem;
+	color: #FFF;
+}
+
+
+.small-line{
+	height: 0.1rem;
+	background-color: var(--primary-color);
+}
+
+.buy-tickets-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+	width: 100%;
+    font-weight: bold;
+    color: white;
+    text-decoration: none; /* Removes underline */
+    background-color: var(--primary-color); /* Use your primary color */
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+	text-align: center;
+}
+
+.buy-tickets-btn:hover {
+    background-color: var(--hover-color); /* Use your hover color */
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.4);
+}
+
+.buy-tickets-btn:active {
+    transform: scale(0.98); /* Slight press effect on click */
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.user-event-owner-by{
+	color: var(--gray-color);
+	font-size: 1.3rem;
+	margin-right: 0.7rem;
+}
+
+.cancelled-event {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.event-page-description,
+.event-page-comments {
+    width: 100%;
+	margin-top: 3rem;
+	margin-bottom: 2rem;
+	color: var(--white-color);
+	display: block; /* Ensures the description section remains flexible */
+}
+
+.event-page-text{
+	margin-top: 2rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	padding: 1rem;
+	font-size: clamp(1rem, 2.5vw, 1.5rem); /* Dynamically adjust font size */
+    line-height: 1.6; /* Adjust line height for readability */
+    word-wrap: break-word; /* Ensure long words or URLs break nicely */
+    max-width: 100%; /* Keep within container bounds */
+	background-color: var(--black-color);
+	border-radius: 0.5rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+
+.add-your-own-comment {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between elements */
+    width:100%;
+}
+
+.profile-pic {
+    width: 4rem; /* Profile picture size in rem */
+    height: 4rem;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image scales properly */
+}
+
+.comment-input {
+    width: 100%;
+    flex: 1; /* Allows the input to expand and fill available space */
+    border: none; /* Remove the default box border */
+    border-bottom: 1px solid #ccc; /* Add a line at the bottom */
+    outline: none; /* Remove the focus outline */
+    font-size: 1rem; /* Font size in rem */
+    padding: 0.5rem 0; /* Add some padding for spacing */
+    background-color: transparent; /* Make the background transparent */
+}
+
+.comment-input::placeholder {
+    color: var(--gray-color); /* Placeholder color for better contrast */
+    font-style: italic; /* Optional: Add a subtle style to placeholder text */
+}
+
+.comment-input:focus {
+    border-bottom: 1px solid var(--primary-color); /* Change bottom border color on focus */
+}
+
+.post-button {
+    padding: 0.625rem 1.25rem; /* Padding in rem */
+    border: none;
+    background-color: var(--primary-color); /* Blue button */
+    color: white;
+    border-radius: 0.3125rem; /* Rounded corners in rem */
+    font-size: 1rem; /* Font size in rem */
+    cursor: pointer;
+}
+
+.post-button:hover {
+    background-color: var(--hover-color); /* Darker blue on hover */
+}
+
+.event-page-tags {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap; /* Allow tags to wrap to a new line */
+    justify-content: center;
+    max-width: 100%; /* Ensure the tags stay within the parent container */
+}
+
+.event-page-tags span { /* Existing tag style */
+    padding: 0.5rem 1rem; /* Adjust padding for tag styling */
+    color: white; /* Anchor text color */
+    border-radius: 1rem; /* Rounded corners */
+    white-space: nowrap; /* Prevent text from breaking inside tags */
+    text-decoration: none; /* Remove underline for anchor tags */
+    display: inline-block; /* Ensures consistent box sizing */
+}
+
+.disabled-btn {
+    background-color: gray;
+    width: 100%;
+    color: lightgray;
+    cursor: not-allowed;
+    pointer-events: none;
+    text-decoration: line-through; /* Crossed text */
+}
+
+.request-btn{
+    color:#fff;
+    background-color: var(--primary-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-style: none;
+}
+
+.request-btn:hover{
+    background-color: var(--hover-color);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+}
+
+/* Purchased button styling */
+.purchased-btn {
+    background-color: var(--hover-color);
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: default; /* Indicate it’s not clickable */
+    pointer-events: none; /* Prevent interaction */
+    border-radius: 2rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.purchased-btn:hover {
+    transform: none; /* No hover effect for purchased button */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow remains */
+}
+
+.disabled-btn{
+    background-color: var(--gray-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: not-allowed;
+}
+
+.buy-tickets-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buy-tickets-btn:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.buy-tickets-btn:disabled {
+    background-color: gray;
+    color: lightgray;
+    cursor: not-allowed;
+}
+
+.buy-more-tickets-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buy-more-tickets-btn:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+/* Edit Button */
+.event-button {
+    margin-top: 0;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--primary-color); /* Green background */
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.event-button:hover {
+    background-color: var(--hover-color); /* Slightly darker green on hover */
+}
+
+.event-button2 {
+    display: inline-block;
+    border-style: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--primary-color); /* Green background */
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.event-button2:hover {
+    background-color: red; /* Slightly darker green on hover */
+}
+
+.title-edit {
+    display: flex;
+    justify-content: space-between; /* To place the event name and edit button on opposite sides */
+    align-items: center;
+}
+
+.remove-participant {
+    background-color: var(--primary-color); /* Replace with your primary color */
+    color: var(--text-color); /* Text color */
+    border: none;
+    border-radius: 8px; /* Rounded edges */
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.remove-participant:hover {
+    background-color: var(--hover-color); /* Hover color */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.remove-participant:active {
+    background-color: var(--active-color); /* Active color when clicked */
+    transform: scale(0.95); /* Slight shrink on click */
+}
+
+.participants-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.add-participant-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.add-participant-btn {
+    background-color: var(--primary-color); /* Adjust to site theme */
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.admin_page .search-bar-container {
+    display: none;
+    margin-left: 0.5rem;
+}
+
+.admin_page .search-bar-container.active {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.admin_page .search-bar-input {
+    color: var(--black-color);
+    width: 150px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+.admin_page .search-bar-input2 {
+    color: var(--black-color);
+    width: 500px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.admin_page .search-submit-btn {
+    background-color: var(--primary-color); /* Adjust to site theme */
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Container for both buttons */
+.button-container {
+    margin-top: 2rem;
+    display: flex; /* Align buttons next to each other */
+    gap: 1rem; /* Adds space between buttons (relative to root font size) */
+    align-items: center; /* Ensures vertical alignment */
+}
+
+/* General button styling to make them the same size */
+button.purchased-btn,
+button.buy-tickets-btn2 {
+    padding: 0.75em 1.5em; /* Relative padding based on font size */
+    font-size: 1rem; /* Scalable font size */
+    border-radius: 2rem; /* Rounded corners */
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: white; /* White text color */
+    cursor: pointer; /* Pointer on hover */
+    flex: 1; /* Ensures equal width for buttons */
+    text-align: center; /* Centers text inside buttons */
+    min-width: 10rem; /* Optional: Ensures a minimum width for consistency */
+    border-style: none;
+}
+
+button.purchased-btn{
+    color:var(--black-color);
+    background-color: gold;
+}
+
+/* Button hover effect */
+button.buy-tickets-btn2:hover {
+    background-color: var(--hover-color); /* Darker blue for hover effect */
+}
+
+/* Ensure the form doesn't break alignment */
+form.buy-tickets-form {
+    margin: 0; /* Remove margin around the form */
+    display: inline; /* Keeps form inline with the button */
+}
+
+.take-me-button-member{
+    display: inline-block;
+    text-decoration: none;
+    background: var(--primary-color);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+    color: var(--text-color);
+    padding: 1rem 2rem; /* 10px 20px equivalent */
+    font-size: 3rem;
+    border-radius: 1em;
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+	transition: all 0.3s ease-in-out;
+	margin-top: 2rem;
+    text-align: center;
+}
+
+.take-me-button-member:hover {
+    background: var(--hover-color);
+}
+
+
+.delete-button-form {
+    margin-left: 14.2rem;
+    margin-top: -5rem;
+    position: absolute; /* Position the form/button inside the event card */
+}
+
+.delete-button {
+    padding: 0.5rem 1rem;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem; 
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+}
+
+.cancel-button-buy, .confirm-button-buy {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+    margin: 0.3rem;
+}
+
+.cancel-button-buy {
+    background-color: #dc3545; /* Red color */
+    color: white;
+}
+
+.confirm-button-buy {
+    background-color: #28a745; /* Green color */
+    color: white;
+}
+
+
+.cancel-button-buy:hover {
+    background-color: red;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.confirm-button-buy:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+#purchaseModal .new-modal-content {
+    padding: 2rem; /* Spacing inside the modal */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 90%; /* Ensure it doesn't overflow horizontally */
+    max-height: 91vh; /* Ensure it doesn't overflow vertically */
+    overflow: auto; /* Allow scrolling inside the modal for large content */
+    box-sizing: border-box; /* Include padding in width and height */
+    margin-top: 8rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column; /* Stack the label on top of the input */
+    align-items: flex-start; /* Align the label to the left */
+    margin-top: 1rem;
+}
+
+.form-input {
+    color: #000;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--hover-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    align-self: flex-start; /* Ensure the label is left-aligned */
+}
+
+  #total-price {
+    font-size: 1.2rem;
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  #refund-per-ticket{
+    font-size: 1rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Style for the Heading (h2) */
+.new-modal-content h2 {
+    font-family: 'Arial', sans-serif; /* Change to a cleaner font */
+    font-size: 2rem; /* Larger font size */
+    font-weight: 600; /* Semi-bold weight for emphasis */
+    text-align: center; /* Center the title */
+    color: var(--primary-color); /* Dark color for better readability */
+    margin-bottom: 1rem; /* Spacing between title and content */
+    letter-spacing: 1px; /* Slightly spread out letters for elegance */
+    text-transform: uppercase; /* Uppercase letters for more visual appeal */
+    border-bottom: 2px solid var(--hover-color); /* Add a border beneath to highlight the title */
+    padding-bottom: 0.5rem; /* Add some spacing between the text and border */
+}
+
+/* Style for the Paragraph (p) */
+.new-modal-content p {
+    font-family: 'Arial', sans-serif; /* Same font for consistency */
+    font-size: 1.125rem; /* Slightly larger text for better readability */
+    text-align: center; /* Center the paragraph text */
+    color: #fff; /* A lighter color for less emphasis */
+    margin-bottom: 2rem; /* Add some space after the paragraph */
+    line-height: 1.5; /* Increase line height for readability */
+}
+
+.capacity-link {
+    color: var(--primary-color); /* Primary color for link */
+    cursor: pointer; /* Change cursor to indicate it’s clickable */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
+}
+
+.capacity-link h5:hover {
+    color: var(--hover-color); /* Change color on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.capacity-arrow {
+    font-size: 1.2rem; /* Adjust the size of the arrow */
+    color: var(--primary-color); /* Same color as the link */
+    cursor: pointer; /* Change cursor to indicate it’s clickable */
+    transition: color 0.3s ease; /* Smooth transition for the arrow */
+}
+
+.capacity-arrow:hover {
+    color: var(--hover-color); /* Change color of arrow on hover */
+}
+
+.capacity-link:hover .capacity-arrow::after {
+    content: "View participants"; /* Add text as a tooltip */
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+}
+
+/* Event Participants Modal */
+.event-participants-modal {
+    color: var(--black-color);
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content */
+.event-participants-modal-content {
+    overflow: hidden;
+    background-color: var(--black-color);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    width: 40%;
+    text-align: center;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Close button */
+.event-participants-modal .close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.event-participants-modal .close-btn:hover {
+    color: var(--primary-color); /* Change close button color on hover */
+}
+
+/* Title of the modal */
+.event-participants-modal h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.comment-form label {
+    display: block;
+    font-size: 0.9rem; /* Slightly smaller labels */
+    margin-bottom: 0.4rem; /* Reduced margin */
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+}
